@@ -1,0 +1,45 @@
+//
+//  PrefixHeader.pch
+//  WoLaiYe
+//
+//  Created by 鲁征东 on 16/6/17.
+//  Copyright © 2016年 鲁征东. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#define  APP_ClOUR RGB(191,17,26)
+// 随机色
+#define LZDRandomColor RGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#define  SCREEN_WIDTH_AND_HEIGHT  CGFloat _width;CGFloat _height;
+
+#define  SCREEN  self.view.backgroundColor=[UIColor whiteColor];_width=[UIScreen mainScreen].bounds.size.width;_height=[UIScreen mainScreen].bounds.size.height;
+
+#define  TOP_VIEW(string)  SCREEN  UIView*topView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, _width, 64)];topView.backgroundColor=APP_ClOUR;[self.view addSubview:topView];UIImageView*backBtn=[[UIImageView alloc]init];backBtn.frame=CGRectMake(_width*0.06, 30, 12, 24);backBtn.image=[UIImage imageNamed:@"right"];[topView addSubview:backBtn];BACK UILabel*label=[[UILabel alloc]initWithFrame:CGRectMake(0, 20, _width, 44)];label.text=string;label.font=[UIFont boldSystemFontOfSize:17];label.textAlignment=NSTextAlignmentCenter;label.textColor=[UIColor whiteColor];[topView addSubview:label];backBtn.transform = CGAffineTransformMakeRotation(M_PI);
+
+#define BACK   UIButton*backTi=[UIButton buttonWithType:UIButtonTypeCustom];backTi.frame=CGRectMake(0, 20, _width*0.2, 44);[backTi addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];[topView addSubview:backTi];
+
+#define RGB(a,b,c) [UIColor colorWithRed:a/255.0 green:b/255.0 blue:c/255.0 alpha:1]
+
+#define  PUSH(viewColler)  viewColler*vc =[[viewColler alloc]init];[self.navigationController pushViewController:vc animated:YES];
+#define  POP   [self.navigationController popViewControllerAnimated:YES];
+
+
+#define LOADING_VIEW  _loadingView=[[UIView alloc]initWithFrame:self.view.frame];_loadingView.userInteractionEnabled=YES;_loadingView.backgroundColor=[UIColor colorWithWhite:0.3 alpha:0.6];[[UIApplication sharedApplication].keyWindow addSubview:_loadingView];UIActivityIndicatorView*viewh=[[UIActivityIndicatorView alloc]initWithFrame:CGRectMake((_width-50)/2, _height/3, 50, 50)];viewh.activityIndicatorViewStyle=UIActivityIndicatorViewStyleWhiteLarge;[viewh startAnimating];UILabel*tishi=[[UILabel alloc]initWithFrame:CGRectMake(0, _height/3+50, _width, 50)];tishi.text=@"\t努力加载中...";tishi.textAlignment=NSTextAlignmentCenter;tishi.textColor=[UIColor whiteColor];[_loadingView addSubview:tishi];[_loadingView addSubview:viewh];[self performSelector:@selector(removeLoadView) withObject:nil afterDelay:15];
+
+#define LOADING_REMOVE  [_loadingView removeFromSuperview];
+
+
+
+
+#define  BaseUrl   @"http://114.215.192.80:10123/KongGe/index.aspx?"
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QQ20160621-0" translatesAutoresizingMaskIntoConstraints="NO" id="mcL-th-yWJ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="mcL-th-yWJ" secondAttribute="bottom" id="CQK-6R-Pnp"/>
+                            <constraint firstItem="mcL-th-yWJ" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="H5I-MN-E3q"/>
+                            <constraint firstItem="mcL-th-yWJ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="fqa-Uh-8XV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mcL-th-yWJ" secondAttribute="trailing" constant="-20" id="ha2-ot-m0s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mcL-th-yWJ" secondAttribute="trailing" id="qMx-hh-UYQ"/>
+                            <constraint firstItem="mcL-th-yWJ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="ui7-v1-pNZ"/>
+                            <constraint firstItem="mcL-th-yWJ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="uwO-78-WTc"/>
+                            <constraint firstItem="mcL-th-yWJ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="yxo-3a-Pbn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mcL-th-yWJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="H5I-MN-E3q"/>
+                                <exclude reference="fqa-Uh-8XV"/>
+                                <exclude reference="ha2-ot-m0s"/>
+                                <exclude reference="qMx-hh-UYQ"/>
+                                <exclude reference="ui7-v1-pNZ"/>
+                                <exclude reference="uwO-78-WTc"/>
+                                <exclude reference="yxo-3a-Pbn"/>
+                                <exclude reference="CQK-6R-Pnp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="mcL-th-yWJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="H5I-MN-E3q"/>
+                                <exclude reference="fqa-Uh-8XV"/>
+                                <include reference="ha2-ot-m0s"/>
+                                <exclude reference="qMx-hh-UYQ"/>
+                                <include reference="ui7-v1-pNZ"/>
+                                <include reference="uwO-78-WTc"/>
+                                <exclude reference="yxo-3a-Pbn"/>
+                                <include reference="CQK-6R-Pnp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.5" y="250"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="QQ20160621-0" width="377" height="652"/>
+    </resources>
+</document>
